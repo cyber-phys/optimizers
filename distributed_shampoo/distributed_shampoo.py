@@ -461,6 +461,8 @@ class DistributedShampoo(torch.optim.Optimizer):
             },
         )
 
+        self.default_params = params
+
         # Initialize non-group-related fields.
         self._distributed_config = distributed_config
         self._use_protected_eigh = use_protected_eigh
